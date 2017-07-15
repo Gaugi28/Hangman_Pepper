@@ -1,0 +1,175 @@
+/* Variabes */
+/* Mixin's */
+body {
+    /*background: #c1d72e;*/
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    color: #000;
+    height: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.wrappper {
+    width: 100%;
+    margin: 0 auto;
+}
+.wrappper:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+canvas {
+    color: #000;
+    border: #000 dashed 2px;
+    padding: 15px;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin: 5px 0;
+}
+
+h1 {
+    font-size: 2.6em;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+p {
+    font-size: 1.6em;
+}
+
+#alphabet {
+    margin: 15px auto;
+    padding: 0;
+    max-width: 810px;
+}
+#alphabet:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#alphabet li {
+    float: left;
+    margin: 0 10px 10px 0;
+    list-style: none;
+    width: 50px;
+    height: 40px;
+    padding-top: 10px;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border: solid 1px #000;
+    font-size: 25px;
+}
+#alphabet li:hover {
+    background: #CACACA;
+    border: solid 1px #787676;
+    color: #000;
+}
+
+#my-word {
+    margin: 0;
+    display: block;
+    padding: 0;
+    display: block;
+}
+
+#my-word li {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 2em;
+}
+#alphabet .active {
+    color: #fff;
+    background-color: #fff;
+}
+.active {
+    opacity: 0.0;
+    filter: alpha(opacity=00);
+    -moz-transition: all 1s ease-in;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    cursor: default;
+}
+
+
+#mylives {
+    font-size: 1.6em;
+    text-align: center;
+    display: block;
+}
+
+button {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -khtml-border-radius: 5px;
+    background: #fff;
+    color: #000;
+    border: solid 1px #000;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 18px 10px;
+    width: 180px;
+    margin: 10px;
+    outline: none;
+}
+button:hover {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: #CACACA;
+    border: solid 1px #787676;
+    color: #000;
+}
+
+@media (max-width: 767px) {
+    #alphabet {
+        padding: 0 0 0 15px;
+    }
+}
+@media (max-width: 480px) {
+    #alphabet {
+        padding: 0 0 0 25px;
+    }
+}
+.central {
+    text-align: center;
+    margin-top: calc(100vh/2 - 125px/2);
+    height: 125px;
+}
+.stopButton {
+    position: absolute;
+    left: 50px;
+    top: 25px;
+}
+.tippButton {
+    position: absolute;
+    right: 50px;
+    top: 25px;
+}
+.container {
+    margin-top: 100px;
+}
+.bgImage {
+    background: url("img/gluehbirne.png") no-repeat center;
+    width: auto;
+    height: 800px;
+
+
+}
