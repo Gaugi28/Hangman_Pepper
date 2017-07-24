@@ -62,8 +62,6 @@ window.onload = function () {
         }
     }
 
-
-
     // Create geusses ul
     result = function () {
         wordHolder = document.getElementById('hold');
@@ -105,8 +103,6 @@ window.onload = function () {
         }
     }
 
-
-
     // OnClick Function
     check = function () {
         list.onclick = function () {
@@ -132,7 +128,7 @@ window.onload = function () {
 
     // Play
     play = function () {
-        gestures = ["klettern", "schwimmen", "elefant", "fotografieren"]
+        gestures = ["klettern", "staubsaugen", "elefant", "fotografieren"]
 
         // chose random gesture:
         word = gestures[Math.floor(Math.random() * gestures.length)]
@@ -148,13 +144,9 @@ window.onload = function () {
         space = 0;
         result();
         comments();
-
-
     }
 
     play();
-
-
 
     // Reset
 
