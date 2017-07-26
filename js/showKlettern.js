@@ -22,9 +22,9 @@ window.onload = function () {
 
         return array;
     }
-    
-    
-    
+
+
+
 
     var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
         'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
@@ -126,11 +126,7 @@ window.onload = function () {
 
     // Play
     play = function () {
-        gestures = ["klettern", "staubsaugen", "elefant", "fotografieren"]
-
-        // chose random gesture:
-        word = gestures[Math.floor(Math.random() * gestures.length)]
-        word = word.replace(/\s/g, "-");
+        word = "klettern";
         console.log(word);
         buttons();
 
@@ -144,13 +140,14 @@ window.onload = function () {
 
     play();
 
-    // Reset
 
+    // More tips --> send Event
+    document.getElementById('hint').onclick = function() {
+        ALTabletBinding.raiseEvent("hint");
+    }
+    // Reset --> send Event
     document.getElementById('reset').onclick = function() {
-        correct.parentNode.removeChild(correct);
-        letters.parentNode.removeChild(letters);
-
-        play();
+        ALTabletBinding.raiseEvent("reset");
     }
 }
 
