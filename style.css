@@ -170,6 +170,7 @@ button:hover {
     background: url("img/gluehbirne.png") no-repeat center;
     width: auto;
     height: 800px;
-
-
+}
+#reset button {
+    width: 220px;
 }
