@@ -130,7 +130,7 @@ window.onload = function () {
 
     // Play
     play = function () {
-        word = "Leiter";
+        word = "leiter";
         console.log(word);
         buttons();
 
