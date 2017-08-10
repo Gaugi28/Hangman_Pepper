@@ -155,6 +155,10 @@ window.onload = function () {
     document.getElementById('reset').onclick = function() {
         ALTabletBinding.raiseEvent("reset");
     };
+    // Stop --> send Event
+    document.getElementById('stop').onclick = function() {
+        ALTabletBinding.raiseEvent("stop");
+    };
 };
 
 
