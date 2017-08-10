@@ -171,6 +171,6 @@ button:hover {
     width: auto;
     height: 800px;
 }
-#reset button {
+#reset button, #exit button {
     width: 220px;
 }

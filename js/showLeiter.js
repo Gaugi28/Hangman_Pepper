@@ -95,7 +95,9 @@ window.onload = function () {
         for (var i = 0; i < geusses.length; i++) {
             if (counter + space === geusses.length) {
                 showLives.innerHTML = "Du hast gewonnen!";
-                ALTabletBinding.raiseEvent("win");
+                try {
+                    ALTabletBinding.raiseEvent("win");
+                } catch(e) {}
 
 
                 againButton.innerHTML = "Nochmal spielen";

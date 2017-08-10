@@ -8,5 +8,5 @@ function sendYesEvent() {
 };
 
 function sendNoEvent() {
-    ALTabletBinding.raiseEvent("no");
+    ALTabletBinding.raiseEvent("exit");
 };
