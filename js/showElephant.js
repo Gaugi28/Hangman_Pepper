@@ -91,6 +91,9 @@ window.onload = function () {
             showLives.innerHTML = "Spiel beendet";
             ALTabletBinding.raiseEvent("loose");
 
+            againButton.innerHTML = "Nochmal spielen";
+            showButton.appendChild( againButton);
+
         }
         for (var i = 0; i < geusses.length; i++) {
             if (counter + space === geusses.length) {
