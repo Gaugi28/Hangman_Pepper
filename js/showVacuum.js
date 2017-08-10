@@ -58,7 +58,7 @@ window.onload = function () {
             myButtons.appendChild(letters);
             letters.appendChild(list);
         }
-    }
+    };
 
     // Create geusses ul
     result = function () {
@@ -80,7 +80,7 @@ window.onload = function () {
             wordHolder.appendChild(correct);
             correct.appendChild(guess);
         }
-    }
+    };
 
     // Show lives
     comments = function () {
@@ -89,17 +89,21 @@ window.onload = function () {
         var againButton = document.createElement('button');
         if (lives < 1) {
             showLives.innerHTML = "Spiel beendet";
+            ALTabletBinding.raiseEvent("loose");
+
         }
         for (var i = 0; i < geusses.length; i++) {
             if (counter + space === geusses.length) {
                 showLives.innerHTML = "Du hast gewonnen!";
+                ALTabletBinding.raiseEvent("win");
+
 
                 againButton.innerHTML = "Nochmal spielen";
                 showButton.appendChild( againButton);
 
             }
         }
-    }
+    };
 
     // OnClick Function
     check = function () {
@@ -121,8 +125,7 @@ window.onload = function () {
                 comments();
             }
         }
-    }
-
+    };
 
     // Play
     play = function () {
@@ -136,7 +139,7 @@ window.onload = function () {
         space = 0;
         result();
         comments();
-    }
+    };
 
     play();
 
@@ -144,11 +147,11 @@ window.onload = function () {
     // More tips --> send Event
     document.getElementById('hint').onclick = function() {
         ALTabletBinding.raiseEvent("hint");
-    }
+    };
     // Reset --> send Event
     document.getElementById('reset').onclick = function() {
         ALTabletBinding.raiseEvent("reset");
-    }
-}
+    };
+};
 
 
