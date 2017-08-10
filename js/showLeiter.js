@@ -22,9 +22,9 @@ window.onload = function () {
 
         return array;
     }
-    
-    
-    
+
+
+
 
     var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
         'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
@@ -58,7 +58,7 @@ window.onload = function () {
             myButtons.appendChild(letters);
             letters.appendChild(list);
         }
-    }
+    };
 
     // Create geusses ul
     result = function () {
@@ -80,7 +80,7 @@ window.onload = function () {
             wordHolder.appendChild(correct);
             correct.appendChild(guess);
         }
-    }
+    };
 
     // Show lives
     comments = function () {
@@ -89,17 +89,21 @@ window.onload = function () {
         var againButton = document.createElement('button');
         if (lives < 1) {
             showLives.innerHTML = "Spiel beendet";
+            ALTabletBinding.raiseEvent("loose");
+
         }
         for (var i = 0; i < geusses.length; i++) {
             if (counter + space === geusses.length) {
                 showLives.innerHTML = "Du hast gewonnen!";
+                ALTabletBinding.raiseEvent("win");
+
 
                 againButton.innerHTML = "Nochmal spielen";
                 showButton.appendChild( againButton);
 
             }
         }
-    }
+    };
 
     // OnClick Function
     check = function () {
@@ -121,16 +125,12 @@ window.onload = function () {
                 comments();
             }
         }
-    }
+    };
 
 
     // Play
     play = function () {
-        gestures = ["klettern", "staubsaugen", "elefant", "fotografieren"]
-
-        // chose random gesture:
-        word = gestures[Math.floor(Math.random() * gestures.length)]
-        word = word.replace(/\s/g, "-");
+        word = "Leiter";
         console.log(word);
         buttons();
 
@@ -140,18 +140,19 @@ window.onload = function () {
         space = 0;
         result();
         comments();
-    }
+    };
 
     play();
 
-    // Reset
 
+    // More tips --> send Event
+    document.getElementById('hint').onclick = function() {
+        ALTabletBinding.raiseEvent("hint");
+    };
+    // Reset --> send Event
     document.getElementById('reset').onclick = function() {
-        correct.parentNode.removeChild(correct);
-        letters.parentNode.removeChild(letters);
-
-        play();
-    }
-}
+        ALTabletBinding.raiseEvent("reset");
+    };
+};
 
 
