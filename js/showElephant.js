@@ -3,6 +3,10 @@
  * source: https://codepen.io/cathydutton/pen/ldazc
  */
 window.onload = function () {
+    
+    
+    
+        
     function shuffle(array) {
         //source: https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
         var currentIndex = array.length, temporaryValue, randomIndex;
@@ -110,7 +114,7 @@ window.onload = function () {
 
     // OnClick Function
     check = function () {
-        list.mouseover = function () {
+        $(list).on("mouseover", function () {
             var geuss = (this.innerHTML).toLowerCase();
             this.setAttribute("class", "active");
             this.mouseover = null;
@@ -127,7 +131,7 @@ window.onload = function () {
             } else {
                 comments();
             }
-        }
+        });
     };
 
 
@@ -147,19 +151,20 @@ window.onload = function () {
 
     play();
 
-
-    // More tips --> send Event
-    document.getElementById('hint').mouseover = function() {
-        ALTabletBinding.raiseEvent("elefant");
-    };
-    // Reset --> send Event
-    document.getElementById('reset').mouseover = function() {
-        ALTabletBinding.raiseEvent("reset");
-    };
-    // Stop --> send Event
-    document.getElementById('stop').mouseover = function() {
-        ALTabletBinding.raiseEvent("stop");
-    };
+    
+    $("#hint").on("mouseover", sendHintEvent);
+    $("#reset").on("mouseover", sendResetEvent);
+    $("#stop").on("mouseover", sendStopEvent);    
 };
 
+function sendHintEvent() {
+    ALTabletBinding.raiseEvent("elefant");
+};
 
+function sendResetEvent() {
+    ALTabletBinding.raiseEvent("reset");
+};
+
+function sendStopEvent() {
+    ALTabletBinding.raiseEvent("stop");
+};
