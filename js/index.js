@@ -1,6 +1,6 @@
 window.onload = function () {
-    $("#button_yes").on("click", sendYesEvent);
-    $("#button_no").on("click", sendNoEvent);
+    $("#button_yes").on("mouseover", sendYesEvent);
+    $("#button_no").on("mouseover", sendNoEvent);
 };
 
 function sendYesEvent() {
@@ -12,10 +12,10 @@ function sendNoEvent() {
 };
 
     // Reset --> send Event
-    document.getElementById('reset').onclick = function() {
+    document.getElementById('reset').mouseover = function() {
         ALTabletBinding.raiseEvent("reset");
     };
     // Stop --> send Event
-    document.getElementById('stop').onclick = function() {
+    document.getElementById('stop').mouseover = function() {
         ALTabletBinding.raiseEvent("stop");
     };

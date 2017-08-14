@@ -111,10 +111,10 @@ window.onload = function () {
 
     // OnClick Function
     check = function () {
-        list.onclick = function () {
+        list.mouseover = function () {
             var geuss = (this.innerHTML).toLowerCase();
             this.setAttribute("class", "active");
-            this.onclick = null;
+            this.mouseover = null;
             for (var i = 0; i < word.length; i++) {
                 if (word[i] === geuss) {
                     geusses[i].innerHTML = geuss;
@@ -150,15 +150,15 @@ window.onload = function () {
 
 
     // More tips --> send Event
-    document.getElementById('hint').onclick = function() {
+    document.getElementById('hint').mouseover = function() {
         ALTabletBinding.raiseEvent("hint");
     };
     // Reset --> send Event
-    document.getElementById('reset').onclick = function() {
+    document.getElementById('reset').mouseover = function() {
         ALTabletBinding.raiseEvent("reset");
     };
     // Stop --> send Event
-    document.getElementById('stop').onclick = function() {
+    document.getElementById('stop').mouseover = function() {
         ALTabletBinding.raiseEvent("stop");
     };
 };

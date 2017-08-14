@@ -1,6 +1,6 @@
 window.onload = function () {
-    $("#reset").on("click", sendResetEvent);
-    $("#exit").on("click", sendExitEvent);
+    $("#reset").on("mouseover", sendResetEvent);
+    $("#exit").on("mouseover", sendExitEvent);
 };
 
 function sendResetEvent() {
