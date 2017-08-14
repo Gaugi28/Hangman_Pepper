@@ -33,7 +33,7 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 2.6em;
+    font-size: 3em;
 }
 
 h2 {
@@ -171,6 +171,9 @@ button:hover {
     width: auto;
     height: 800px;
 }
-#reset button, #exit button {
+#exit button {
     width: 220px;
+}
+#reset button {
+    width: 300px;
 }
