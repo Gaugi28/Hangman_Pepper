@@ -152,7 +152,7 @@ window.onload = function () {
     play();
 
     
-    $("#hint").on("mouseover", sendHintEvent);
+    $("#hint").on("mousedown", sendHintEvent);
     $("#reset").on("mouseover", sendResetEvent);
     $("#stop").on("mouseover", sendStopEvent);    
 };
