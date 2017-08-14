@@ -148,7 +148,7 @@ window.onload = function () {
 
     // More tips --> send Event
     document.getElementById('hint').mouseover = function() {
-        ALTabletBinding.raiseEvent("hint");
+        ALTabletBinding.raiseEvent("staubsaugen");
     };
     // Reset --> send Event
     document.getElementById('reset').mouseover = function() {
